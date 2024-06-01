@@ -11,7 +11,7 @@ const LoginForm = () => {
     try {
       const response = await axios.post('http://localhost:5000/api/users', { userName, password });
       console.log('User created successfully:', response.data);
-      window.location.href = 'https://drive.google.com/file/d/1cwhc2PtWJ0E9778XkbmB3ehnISfgp8qN/view'; // Redirect to external URL
+      window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSffzzCdaPxAT91s5DV3YRLK6M8AgaMU-RrIDX1iq0EFoYGh2w/viewform?usp=sf_link'; // Redirect to external URL
     } catch (err) {
       console.error('Error creating user:', err);
     }
