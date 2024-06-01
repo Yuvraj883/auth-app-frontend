@@ -10,15 +10,10 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Make a POST request to your backend API
       const response = await axios.post('http://localhost:5000/api/users', { email, password });
-
-      // If user creation is successful, log the response and redirect to a success page
       console.log('User created successfully:', response.data);
-      // Assuming you have a success page route configured in your React Router
-      navigate('/success');
+      navigate('https://forms.gle/YOUR_GOOGLE_FORM_LINK');
     } catch (err) {
-      // If there's an error, log it
       console.error('Error creating user:', err);
     }
   };
