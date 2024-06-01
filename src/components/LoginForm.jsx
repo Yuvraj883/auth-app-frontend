@@ -51,9 +51,9 @@ const LoginForm = () => {
             Log In
           </button>
         </form>
-        <div className="flex justify-center mt-6">
+        {/* <div className="flex justify-center mt-6">
           <a href="https://www.instagram.com/accounts/password/reset/" className="text-blue-500">Forgot password?</a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
