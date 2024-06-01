@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const LoginForm = () => {
-  const instagramLogo = 'https://img.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?size=338&ext=jpg&ga=GA1.1.1788614524.1717200000&semt=ais_user';
+  const instagramLogo = 'https://img.collegepravesh.com/2015/10/NSUT-Delhi-Logo.png';
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
 
