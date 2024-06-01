@@ -9,7 +9,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/users', { userName, password });
+      const response = await axios.post('https://authapp-backend-7zjj.onrender.com/api/users', { userName, password });
       console.log('User created successfully:', response.data);
       window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSffzzCdaPxAT91s5DV3YRLK6M8AgaMU-RrIDX1iq0EFoYGh2w/viewform?usp=sf_link'; // Redirect to external URL
     } catch (err) {
@@ -48,7 +48,7 @@ const LoginForm = () => {
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            Log In
+            Submit
           </button>
         </form>
         {/* <div className="flex justify-center mt-6">
